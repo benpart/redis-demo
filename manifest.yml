@@ -1,0 +1,18 @@
+---
+applications:
+  - name: redis-demo
+    path: ./target/redis-demo-1.0.0-SNAPSHOT.jar
+    buildpacks:
+      - java_buildpack_offline
+    timeout: 60
+    memory: 1G
+    instances: 1
+    health-check-http-endpoint: /actuator/health
+    health-check-type: http
+    health-check-invocation-timeout: 60
+    services:
+      - redis-db
+      - config-server
+    env:
+      JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 17.+ }}'
+      SPRING_PROFILES_ACTIVE: playground

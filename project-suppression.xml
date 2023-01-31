@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suppressions xmlns="https://jeremylong.github.io/DependencyCheck/dependency-suppression.1.3.xsd">
+
+    <!-- ======== ================================================================================================================================================ ========  -->
+    <!-- Ce fichier xml permet d'ignorer les dépendances en échec ou warning lors du contrôle OWASP Dependency Check. -->
+
+    <!-- En premier lieu, vérifier si elles peuvent être upgradées vers des versions plus récentes. -->
+    <!-- Il est également important de consulter les CVE au niveau du NVD pour vérifier l’importance de la vulnérabilité. -->
+    <!-- Cela permet d’identifier un faux positif. En cas de faux positif, veuillez prévenir votre RSI Fab’ qui se chargera d’évaluer ce faux positif. -->
+    <!-- Liens documentation CD056 – Analyse des dépendances vulnérables : http://tmj.git-scm.pole-emploi.intra/site/livrables_enf/cd056-developpement_securise_dependency_check/implementation_PAS.html -->
+    <!-- ======== ================================================================================================================================================ ========  -->
+
+    <!-- Par exemple, si la CVE-XXXX-XXX est détectée dans un projet Spring dont la version est supérieure à celle mentionnée dans la CVE, il peut s’agir d’un faux positif. -->
+    <!-- Après validation avec le RSI, on peut alors exclure cette CVE en l’insérant dans le fichier project-suppression.xml. -->
+
+    <!--
+    <suppress>
+        <notes>False positive</notes>
+        <packageUrl regex="true">^pkg:maven/org\.springframework\.ws/spring\-ws\-xxxxxxx@.*$</packageUrl>
+        <cve>CVE-XXXX-XXXX</cve>
+    </suppress>
+    -->
+
+</suppressions>
+

@@ -1,0 +1,22 @@
+info:
+  app:
+    name: @project.name@
+    version: @project.version@
+    description: @project.description@
+    environment: no profile
+
+management:
+  endpoints:
+    web:
+     exposure:
+      include: '*'
+  info:
+    env:
+     enabled: true
+
+logging:
+  pattern:
+    console: "{\"TIMESTAMP\": \"%d{'yyyy-MM-dd HH:mm:ss,SSS', GMT+2}\", \"VERSION\": \"${info.app.version}\", \"TYPE\": \"%p\", \"APPLI\": \"${info.app.name}\", \"ENV\": \"${info.app.environment}\", \"IDCOR\": \"%X{traceId}\", \"SERVERNODE\": \"%replace(%t){'\\n','\\\\n'}%nopex\", \"CLASS\": \"%replace(%c){'\\n','\\\\n'}%nopex\", \"MSG\": \"%replace(%m){'\\n','\\\\n'}%nopex\",  \"DATA\": \"%t %c %m %replace(%xException){'\\n','\\\\n'}%nopex\"}%n"
+  level:
+    root: INFO
+
