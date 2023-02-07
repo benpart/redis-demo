@@ -1,0 +1,6 @@
+spring:
+  data:
+    redis:
+      host: ${spring.redis.host}
+      password: ${spring.redis.password}
+      port: ${spring.redis.port}
