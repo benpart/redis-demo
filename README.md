@@ -13,7 +13,7 @@ The new path since spring boot 3 is spring.data.redis while automatic recovery s
 
 It is possible to override the redis connection configuration with the correct path but it is no longer automatic and transparent for the developer.
 
-In this example, to make the application work, you must activate the *correctif* profile.
+In this example, to make the application work, you must activate the *correctif* profile SPRING_PROFILES_ACTIVE.
 The latter uses the configuration of the *application-correctif.yml* file:
 
 ```yaml
